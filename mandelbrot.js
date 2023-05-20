@@ -2,16 +2,16 @@ var maxiterations = 2;
 
 function load()
 {
-	var canvas = document.getElementById('canvas');
+	var canvas = document.getElementById('canvas_fractals');
 	//canvas.width  = window.innerWidth;
 	//canvas.height = window.innerHeight;
-	
+	maxiterations = 1;
 	window.requestAnimationFrame(draw);
 }
 
 function draw()
 {
-	var canvas = document.getElementById('canvas');
+	var canvas = document.getElementById('canvas_fractals');
 	var ctx = canvas.getContext('2d');
 	
 	const w = 4;
