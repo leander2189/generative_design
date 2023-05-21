@@ -4,18 +4,45 @@
     <meta charset="utf-8">
     <title>Generative Design</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
     <script src="mandelbrot.js"></script>
   </head>
   <body>
+    <div class="container">
     <!-- page content -->
 
     <h1>Generative algorithms</h1>
 
     <h2>Fractals - Mandelbrot</h2>
-    <p>The next animation belongs to the famous Mandelbrot's fractal</p>
+    <p>The Mandelbrot fractal is a fascinating mathematical set that exhibits
+       intricate and infinitely complex patterns. It was discovered and popularized 
+       by the mathematician Benoît Mandelbrot in the 1970s</p>
 
-    <button class="button" onclick="load()">Play me</button>
+    <p>The Mandelbrot set is defined in the complex plane, which consists of numbers 
+    with real and imaginary parts. Each point in the complex plane represents a 
+    different complex number. For a given complex number \(c\), the behavior of the sequence
+    \(z_{n+1}=z_n^{2}+c\) is studied.</p>
+
+    <p>The interesting and visually stunning aspect of the Mandelbrot set lies in the points 
+      that are outside the set. The iterations can lead to chaotic behavior, generating intricate 
+      patterns with intricate detail, no matter how closely you zoom in. These patterns exhibit 
+      self-similarity, meaning that smaller and smaller portions of the set resemble the overall 
+      shape of the set.</p>
+
+    <p>When graphically visualizing the Mandelbrot set, points inside the set are usually colored 
+      black, while the colors of the points outside the set are determined based on the number 
+      of iterations required to reach an escape condition or the magnitude of divergence.</p>
+
+    <!--button class="button" onclick="load">Play me</button-->
+    
     <br>
 	  <canvas id="canvas_fractals" width="1000" height="400"></canvas>
+    <script>
+      const canvas = new PanZoomCanvas("canvas_fractals");
+    </script>
+    </div>
   </body>
 </html>

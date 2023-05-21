@@ -2,7 +2,14 @@ body
 {
     background-color: black;
     color: lightgray;
-    text-align: center;
+    text-align: justify;
+}
+
+.container
+{
+    width: 1000px;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 canvas
@@ -10,6 +17,7 @@ canvas
     border-style: solid;
     border-width: thin;
     border-color: white;
+    text-align: center;
 }
 
 .button
