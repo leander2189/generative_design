@@ -11,6 +11,7 @@
     <script src="pan_zoom_canvas.js"></script>
     <script src="mandelbrot.js"></script>
     <script src="colormaps.js"></script>
+    <script src="random_walk.js"></script>
   </head>
   <body>
     <div class="container">
@@ -45,6 +46,15 @@
     <script>
       const canvas = new FractalCanvas("canvas_fractals");
     </script>
+
+
+    <h2>Random walk</h2>
+    <br>
+    <canvas id="random_walk" width="1000" height="400"></canvas>
+    <script>
+      const canvas2 = new RandomWalk("random_walk");
+    </script>
+
     </div>
   </body>
 </html>
