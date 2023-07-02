@@ -8,24 +8,32 @@ class FractalCanvas extends PanZoomCanvas
 		const h = (w * this.canvas.height) / this.canvas.width;
 		const axes = [-0.5-w/2, -0.5+w/2, -h/2, h/2 ];
   
-		this.xmin_0 = -0.5 - w/2;
-		this.xmax_0 = -0.5 + w/2;
-		this.ymin_0 = -h/2;
-		this.ymax_0 = +h/2;
+		const xmin_0 = -0.5 - w/2;
+		const xmax_0 = -0.5 + w/2;
+		const ymin_0 = -h/2;
+		const ymax_0 = +h/2;
   
+		this.setLimits(xmin_0, xmax_0, ymin_0, ymax_0);
+
 		this.maxiterations = 200;
 
 		this.drawCanvas();
 	}
 
 	drawCanvas() {
-
+/*
 		const sx = (this.xmax_0-this.xmin_0)/this.canvas.width;
 		const sy = (this.ymax_0-this.ymin_0)/this.canvas.height;
 		const xmin = this.xmin_0/this.scale - this.panX*sx;
 		const xmax = this.xmax_0/this.scale - this.panX*sx;
 		const ymin = this.ymin_0/this.scale - this.panY*sy;
 		const ymax = this.ymax_0/this.scale - this.panY*sy;
+*/
+		const limits = this.getLimits();
+		const xmin = limits[0];
+		const xmax = limits[1];
+		const ymin = limits[2];
+		const ymax = limits[3];
 
 
 		this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
